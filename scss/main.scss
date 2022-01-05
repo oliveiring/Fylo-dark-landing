@@ -1,0 +1,120 @@
+/*----------------*/
+   /*Setting up*/
+ /*---------------*/
+@use '../scss/global.scss' as c;
+
+body{background:c.color(main-bg)}
+@mixin flex-columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button {
+  border:0;
+  font-weight:bold;
+  color: c.color(white-color);
+  cursor: pointer;
+  border-radius: 100px;
+  background:linear-gradient(c.color(cyan-color) ,c.color(blue-color));
+}
+/*----------------*/
+   /*Navagetion*/
+ /*---------------*/
+#navbar{
+  padding:5rem 1rem;
+  @include flex-columns();
+  .logo{
+    width: 150px;
+    display:inline-block;
+  }
+  .main-nav{
+    padding:1px;
+    li{
+      padding: 0 4rem;
+      float:left;
+    }
+    a{
+      color:c.color(white-color);
+      font-size:1rem;
+      transition:3s;
+      &:hover{
+        border-bottom:1px solid c.color(white-color);
+        transition: all 3s;
+      }
+    }
+  }
+}
+/*----------------*/
+    /*Header*/
+ /*---------------*/
+
+ .main-page{
+  //background-color: c.color(other-color);
+  color: c.color(white-color);
+  position: relative;
+ }
+
+ #hero{
+   .content{
+     z-index:1;
+     padding:10px;
+     display:flex;
+     justify-content:center;
+     flex-direction:column;
+     align-items:center;
+     background:url('../images/bg-curvy-desktop.svg') bottom no-repeat;
+     background-size:100% 300px;
+   }
+   img{
+     width:700px;
+     margin: 0 auto;
+     display: block;
+   }
+   h1{
+    color:c.color(white-color);
+    font-weight:700;
+    font-size: 2rem;
+    width: 50%;
+    text-align: center;
+   }
+   p{
+     width:40%;
+     margin: 2rem;
+     line-height:1.5rem;
+     color:c.color(white-color);
+   }
+   .btn{
+     @include button();
+     padding:1rem 5rem;
+   }
+ }
+
+ @media(max-width:789px){
+    body{font-size: 15px;}
+
+    @mixin flex-columns{flex-direction: column-reverse;}
+
+    @mixin flex-itemns {flex-direction:column;}
+
+    #hero{
+      .content{
+        @include flex-columns();
+        text-align: center;
+      }
+      
+    }
+ }
+
+
+
+
+
+
+

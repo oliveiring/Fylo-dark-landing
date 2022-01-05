@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/*----------------*/
+/*colors*/
+/*---------------*/
+/*----------------*/
+/*Ultility code*/
+/*---------------*/
+.row {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/*----------------*/
+/*Setting up*/
+/*---------------*/
+body {
+  background: #1c2431;
+}
+
+/*----------------*/
+/*Navagetion*/
+/*---------------*/
+#navbar {
+  padding: 5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#navbar .logo {
+  width: 150px;
+  display: inline-block;
+}
+#navbar .main-nav {
+  padding: 1px;
+}
+#navbar .main-nav li {
+  padding: 0 4rem;
+  float: left;
+}
+#navbar .main-nav a {
+  color: white;
+  font-size: 1rem;
+  transition: 3s;
+}
+#navbar .main-nav a:hover {
+  border-bottom: 1px solid white;
+  transition: all 3s;
+}
+
+/*----------------*/
+/*Header*/
+/*---------------*/
+.main-page {
+  color: white;
+  position: relative;
+}
+
+#hero .content {
+  z-index: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: url("../images/bg-curvy-desktop.svg") bottom no-repeat;
+  background-size: 100% 300px;
+}
+#hero img {
+  width: 700px;
+  margin: 0 auto;
+  display: block;
+}
+#hero h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  width: 50%;
+  text-align: center;
+}
+#hero p {
+  width: 40%;
+  margin: 2rem;
+  line-height: 1.5rem;
+  color: white;
+}
+#hero .btn {
+  border: 0;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 100px;
+  background: linear-gradient(#65e2d9, #339ecc);
+  padding: 1rem 5rem;
+}
+
+@media (max-width: 789px) {
+  body {
+    font-size: 15px;
+  }
+
+  #hero .content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
