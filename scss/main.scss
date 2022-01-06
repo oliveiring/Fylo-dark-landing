@@ -13,7 +13,7 @@ body{background:c.color(main-bg)}
 @mixin flex-items {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 @mixin button {
@@ -31,7 +31,7 @@ body{background:c.color(main-bg)}
   padding:5rem 1rem;
   @include flex-columns();
   .logo{
-    width: 150px;
+    width: 100px;
     display:inline-block;
   }
   .main-nav{
@@ -56,7 +56,7 @@ body{background:c.color(main-bg)}
  /*---------------*/
 
  .main-page{
-  //background-color: c.color(other-color);
+  background-color: c.color(other-color);
   color: c.color(white-color);
   position: relative;
  }
@@ -95,22 +95,142 @@ body{background:c.color(main-bg)}
      padding:1rem 5rem;
    }
  }
+/*----------------*/
+    /*Product*/
+ /*---------------*/
+ #product{
+   padding:2rem;
+   .plan{
+     text-align:center;
+     padding-top:4rem;
+     width:100%;
+     @include flex-items();
+     .item{
+       padding-top:4rem; 
+       img{
+         width: 80px;
+         padding: 1rem 0;
+       }
+       p{
+         line-height: 1.5rem;
+         text-align: center;
+         width: 26rem;
+         color: c.color(white-color);
+         padding:2rem;
+       }
+       h3{
+         font-weight:900;
+         font-size:1.3rem;
+       }
+     }
+   }
+ }
 
- @media(max-width:789px){
-    body{font-size: 15px;}
+ /*----------------*/
+    /*Product*/
+ /*---------------*/
 
-    @mixin flex-columns{flex-direction: column-reverse;}
+ #productive{
+   .showcase-productive{
+     @include flex-items();
+     .item{
+       padding-left: 2rem;
 
-    @mixin flex-itemns {flex-direction:column;}
+       img{width: 550px;}
+     }
+
+     .item:last-child{
+      h2{font-size:2rem;}
+     
+    
+       P{
+         padding: 1.3rem 0;
+         line-height:1.7rem;
+       }
+       a{
+         color:c.color(cyan-color);
+         border-bottom:1px solid c.color(cyan-color);
+         padding-bottom:2px;
+         img{width:1rem;}
+       }
+      }
+   }
+ }
+
+ @media(max-width:776px){
+    #navbar{padding:2rem 1rem;
+      .main-nav{
+        li{padding: 0;}
+        
+        a{
+          padding: 0 5px;
+          
+        }
+      }
+    }
 
     #hero{
+      height: 50%;
       .content{
-        @include flex-columns();
-        text-align: center;
+        background:url('../images/bg-curvy-mobile.svg') bottom no-repeat;
+        background-size:100% 150px;
+
+        img{width: 100%;}
+
+        h1{font-size:1.5rem;}
+
+        h1,p{width: 100%;}
+
+        P{text-align: center;}
       }
-      
     }
- }
+    @mixin flex-items {flex-direction: column;}
+
+    #product{
+      padding:2rem;
+      .plan{
+        padding-top:3rem;
+        @include flex-items();
+        .item{
+          padding-top:2rem; 
+          img{
+            padding-top:3rem;
+          }
+          p{
+            width:100%;
+            padding:2rem 0.3rem;
+          }
+        }
+      }
+    }
+   
+    //Productive
+  #productive{
+    background:c.color(other-color);  
+    .showcase-productive{
+      @include flex-items();
+      
+      .item{
+        padding-left:1rem;
+        
+        img{width:100%;}
+        h2{ font-size: 1rem;}
+      }
+    }
+  }
+
+
+}
+
+  
+    
+//small screen less than 289
+@media(max-width:289px){
+  #navbar{
+    .main-nav a{font-size: 0.8rem;}
+    .logo{width: 70px;}
+  }
+}
 
 
 
