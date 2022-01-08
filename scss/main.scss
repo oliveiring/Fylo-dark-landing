@@ -157,15 +157,56 @@ body{background:c.color(main-bg)}
    }
  }
 
+ 
+/*----------------*/
+   /*Testimonial*/
+ /*----------------*/
+#testimonial{
+  display: flex;
+  flex-direction: row;
+  padding:10rem 4rem;
+  padding-bottom: 20rem;
+  position: relative;
+  .quote{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 17%;
+  }
+  .box{
+    background: c.color(testimonials-bg);
+    padding: 3rem 1rem;
+    margin-right: 2rem;
+    border-radius: 3px;
+    box-shadow:3px 3px 3px rgb(22, 21, 21);
+    z-index:1;
+    .text{
+      padding-bottom:2rem;
+
+      blockquote{line-height:1.5rem;}
+    }
+    .user{
+      display: flex;
+      align-items: center;
+      img{
+      
+        width:30px;
+        height:30px;
+        border-radius:50%;
+        margin-right:1rem;
+      }
+      div p{font-size: 0.6rem;}
+    }
+  }
+}
+
+ 
  @media(max-width:776px){
     #navbar{padding:2rem 1rem;
       .main-nav{
         li{padding: 0;}
         
-        a{
-          padding: 0 5px;
-          
-        }
+        a{padding: 0 5px;}
       }
     }
 
@@ -193,9 +234,7 @@ body{background:c.color(main-bg)}
         @include flex-items();
         .item{
           padding-top:2rem; 
-          img{
-            padding-top:3rem;
-          }
+          img{padding-top:3rem;}
           p{
             width:100%;
             padding:2rem 0.3rem;
@@ -209,7 +248,6 @@ body{background:c.color(main-bg)}
     background:c.color(other-color);  
     .showcase-productive{
       @include flex-items();
-      
       .item{
         padding-left:1rem;
         
